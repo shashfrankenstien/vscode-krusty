@@ -1,0 +1,30 @@
+{
+	"name": "vscode-krusty",
+	"displayName": "vscode-krusty",
+	"description": "VSCode language support for Krusty",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.47.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "krusty",
+			"aliases": ["Krusty", "krusty"],
+			"extensions": [".kry"],
+			"configuration": "./language-configuration.json"
+		}],
+		"grammars": [{
+			"language": "krusty",
+			"scopeName": "source.kry",
+			"path": "./syntaxes/krusty.tmLanguage.json"
+		}],
+		"snippets": [{
+			"language": "krusty",
+			"scopeName": "source.kry",
+			"path": "./snippets/krusty.json"
+		}]
+	}
+}

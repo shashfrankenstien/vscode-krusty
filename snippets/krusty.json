@@ -1,0 +1,9 @@
+{
+	".source.kry": {
+		"function definition": {
+			"prefix": "=>",
+			"body": "=> {$1}",
+			"description": "Snippet for function definition"
+		}
+	}
+}

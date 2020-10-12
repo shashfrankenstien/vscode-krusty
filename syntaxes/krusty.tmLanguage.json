@@ -1,0 +1,82 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Krusty",
+	"scopeName": "source.kry",
+	"patterns": [
+		{"include": "#comment"},
+		{"include": "#builtin-values"},
+		{"include": "#builtin-functions"},
+		{"include": "#func-def"},{"include": "#func-def-inline"},
+		{"include": "#func-args"},
+		{"include": "#func-call"},
+		{"include": "#operators"},
+		{"include": "#strings"}, {"include": "#strings-single"},
+		{"include": "#numbers"}
+	],
+	"repository": {
+		"comment": {
+			"patterns": [{
+				"name": "comment.krusty",
+				"match": "#.*\n$"
+			}]
+		},
+		"builtin-values": {
+			"name": "constant.language.krusty",
+			"match": "\\b(true|false|null)\\b"
+		},
+		"builtin-functions": {
+			"name": "support.function.krusty",
+			"match": "\\b(print|type|if)(?=\\s*\\()"
+		},
+		"func-call": {
+			"name": "entity.name.function.krusty",
+			"match": "\\b([_a-zA-Z]+[_a-zA-Z0-9]*)(?=\\s*\\()"
+		},
+		"func-def": {
+			"begin": "(?<=\\(.*\\)\\s*)=>\\s*{?",
+			"end": "}",
+			"beginCaptures": {"0":{"name": "storage.type.function.krusty"}},
+			"endCaptures": {"0":{"name": "storage.type.function.krusty"}},
+			"patterns": [{"include": "$self"}]
+		},
+		"func-def-inline": {
+			"match": "(?<=\\(.*\\)\\s*)=>",
+			"name": "storage.type.function.krusty"
+		},
+		"func-args": {
+			"begin": "\\((?=[^(]*\\)\\s*=>)",
+			"end": "\\)(?=\\s*=>)",
+			"captures": {"0": {"name": "entity.name.function.krusty"}},
+			"patterns": [{
+				"name": "variable.parameter.krusty",
+				"match": "\\w"
+			}]
+		},
+		"operators": {
+			"name": "keyword.operator.krusty",
+			"match": "(\\*|\\+|\\-|\\/|=|==|!=|<|<=|>|>=|ret)"
+		},
+		"strings": {
+			"name": "string.quoted.double.krusty",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.krusty",
+				"match": "\\\\."
+			}]
+		},
+		"strings-single": {
+			"name": "string.quoted.single.krusty",
+			"begin": "'",
+			"end": "'",
+			"patterns": [{
+				"name": "constant.character.escape.krusty",
+				"match": "\\\\."
+			}]
+		},
+		"numbers": {
+			"name": "constant.numeric",
+			"match": "(?<!\\w)[+-]?[.0-9]+(?!\\w)"
+		}
+	}
+}
