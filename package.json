@@ -3,6 +3,7 @@
 	"displayName": "vscode-krusty",
 	"description": "VSCode language support for Krusty",
 	"version": "0.0.1",
+	"publisher": "shashfrankenstien",
 	"engines": {
 		"vscode": "^1.47.0"
 	},

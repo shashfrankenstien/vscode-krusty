@@ -1,6 +1,6 @@
 # vscode-krusty README
 
-This is the README for your extension "vscode-krusty".
+This is the README for extension "vscode-krusty".
 It contains VSCode syntax highlighting for [krusty-lang](https://github.com/shashfrankenstien/krusty-lang.git)
 
 ## Features
@@ -63,4 +63,4 @@ Added features X, Y, and Z.
 * [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
-**Enjoy!**
+<!-- **Enjoy!** -->

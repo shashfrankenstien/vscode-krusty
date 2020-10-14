@@ -1,2 +1,3 @@
-mkdir -p ~/.vscode/extensions/vscode-krusty
-cp -pr . ~/.vscode/extensions/vscode-krusty/
+rm *.vsix
+vsce package
+code --install-extension *.vsix
