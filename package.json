@@ -3,6 +3,7 @@
 	"displayName": "vscode-krusty",
 	"description": "VSCode language support for Krusty",
 	"version": "0.0.1",
+	"private": true,
 	"publisher": "shashfrankenstien",
 	"engines": {
 		"vscode": "^1.47.0"
@@ -10,6 +11,10 @@
 	"categories": [
 		"Programming Languages"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/shashfrankenstien/vscode-krusty.git"
+	},
 	"contributes": {
 		"languages": [{
 			"id": "krusty",
