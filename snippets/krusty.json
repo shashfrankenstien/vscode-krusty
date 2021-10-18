@@ -1,5 +1,5 @@
 {
-	".source.kry": {
+	".source.krt": {
 		"function definition": {
 			"prefix": "=>",
 			"body": "=> {$1}",

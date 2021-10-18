@@ -19,17 +19,17 @@
 		"languages": [{
 			"id": "krusty",
 			"aliases": ["Krusty", "krusty"],
-			"extensions": [".kry"],
+			"extensions": [".kry", ".krt"],
 			"configuration": "./language-configuration.json"
 		}],
 		"grammars": [{
 			"language": "krusty",
-			"scopeName": "source.kry",
+			"scopeName": "source.krt",
 			"path": "./syntaxes/krusty.tmLanguage.json"
 		}],
 		"snippets": [{
 			"language": "krusty",
-			"scopeName": "source.kry",
+			"scopeName": "source.krt",
 			"path": "./snippets/krusty.json"
 		}]
 	}
