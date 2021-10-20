@@ -26,7 +26,7 @@
 		},
 		"builtin-functions": {
 			"name": "support.function.krusty",
-			"match": "\\b(print|type|if|import|import_native|len|foreach)\\b"
+			"match": "\\b(print|type|if|import|import_native|len|foreach|assert|exit)\\b"
 		},
 		"func-call": {
 			"name": "entity.name.function.krusty",
