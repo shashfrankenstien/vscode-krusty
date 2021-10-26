@@ -6,10 +6,10 @@
 		{"include": "#comment"},
 		{"include": "#builtin-values"},
 		{"include": "#builtin-functions"},
+		{"include": "#operators"},
 		{"include": "#func-def"},{"include": "#func-def-inline"},
 		{"include": "#func-args"},
 		{"include": "#func-call"},
-		{"include": "#operators"},
 		{"include": "#strings"}, {"include": "#strings-single"},
 		{"include": "#numbers"}
 	],
@@ -27,6 +27,10 @@
 		"builtin-functions": {
 			"name": "support.function.krusty",
 			"match": "\\b(print|type|if|import|import_native|len|foreach|assert|exit)\\b"
+		},
+		"operators": {
+			"name": "keyword.operator.krusty",
+			"match": "\\b(\\*|\\+|\\-|\\/|=|==|!=|<|<=|>|>=|ret)\\b"
 		},
 		"func-call": {
 			"name": "entity.name.function.krusty",
@@ -51,10 +55,6 @@
 				"name": "variable.parameter.krusty",
 				"match": "\\w"
 			}]
-		},
-		"operators": {
-			"name": "keyword.operator.krusty",
-			"match": "(\\*|\\+|\\-|\\/|=|==|!=|<|<=|>|>=|ret)"
 		},
 		"strings": {
 			"name": "string.quoted.double.krusty",
