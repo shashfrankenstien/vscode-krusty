@@ -30,7 +30,7 @@
 		},
 		"operators": {
 			"name": "keyword.operator.krusty",
-			"match": "\\b(\\*|\\+|\\-|\\/|=|==|!=|<|<=|>|>=|ret)\\b"
+			"match": "(\\*|\\+|\\-|\\/|=|==|!=|<|<=|>|>=|ret)"
 		},
 		"func-call": {
 			"name": "entity.name.function.krusty",
