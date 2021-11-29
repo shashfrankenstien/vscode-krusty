@@ -6,12 +6,12 @@
 		{"include": "#comment"},
 		{"include": "#builtin-values"},
 		{"include": "#builtin-functions"},
+		{"include": "#numbers"},
 		{"include": "#operators"},
 		{"include": "#func-def"},{"include": "#func-def-inline"},
 		{"include": "#func-args"},
 		{"include": "#func-call"},
-		{"include": "#strings"}, {"include": "#strings-single"},
-		{"include": "#numbers"}
+		{"include": "#strings"}, {"include": "#strings-single"}
 	],
 	"repository": {
 		"comment": {
@@ -26,7 +26,7 @@
 		},
 		"builtin-functions": {
 			"name": "support.function.krusty",
-			"match": "\\b(print|type|if|import|import_native|len|foreach|assert|exit)\\b"
+			"match": "\\b(print|type|if|import|import_native|len|foreach|assert|exit|vars|try|spill)\\b"
 		},
 		"operators": {
 			"name": "keyword.operator.krusty",
@@ -37,8 +37,8 @@
 			"match": "\\b([_a-zA-Z]+[_a-zA-Z0-9]*)(?=\\s*\\()"
 		},
 		"func-def": {
-			"begin": "(?<=\\(.*\\)\\s*)=>\\s*{?",
-			"end": "}",
+			"begin": "(?<=\\(.*\\)\\s*)=>\\s*\\{?",
+			"end": "\\}",
 			"beginCaptures": {"0":{"name": "storage.type.function.krusty"}},
 			"endCaptures": {"0":{"name": "storage.type.function.krusty"}},
 			"patterns": [{"include": "$self"}]
